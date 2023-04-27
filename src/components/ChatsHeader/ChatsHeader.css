@@ -1,0 +1,4 @@
+.chats-header{
+    height: var(--header-height);
+    background-color: var(--background-light);
+}
