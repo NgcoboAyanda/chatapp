@@ -15,3 +15,11 @@
 .chats-header__buttons{
     margin-left: auto;
 }
+
+.chats-header__buttons > div {
+    display: flex;
+}
+
+.chats-header__buttons > div > *:not(:first-child){
+    margin-left: var(--space-small);
+}

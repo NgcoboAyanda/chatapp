@@ -5,9 +5,21 @@
     width: 40px;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.08s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.ui-button:active{
+    background-color: var(--ui-icon-ligher);
+}
 
+.ui-button > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .ui-button > div > svg {
     fill: var(--ui-icon-light);
