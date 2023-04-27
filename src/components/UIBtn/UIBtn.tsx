@@ -3,9 +3,9 @@ import './UIBtn.css';
 
 
 interface UIBtnProps {
-    label: string, //the label of the button
+    label: string //the label of the button
     icon: ReactNode //the svg icon,
-    onClick: Function //the click handler
+    onClick: () => void; //the click handler
 }
 
 const UIBtn = ( { label, icon, onClick } : UIBtnProps ) => {

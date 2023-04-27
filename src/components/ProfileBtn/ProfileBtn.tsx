@@ -5,7 +5,7 @@ import './ProfileBtn.css';
 interface ProfileBtnProps {
     image: string,//this is a link
     alt: string,//this is the image alt text
-    openProfile: Function //this is a function that will be called when the profileBtn component is clicked. it will open the Profile component.
+    openProfile: () => void; //this is a function that will be called when the profileBtn component is clicked. it will open the Profile component.
 }
 
 const ProfileBtn = ({ image, alt, openProfile } : ProfileBtnProps) => {
