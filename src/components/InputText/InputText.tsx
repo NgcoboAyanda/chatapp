@@ -5,7 +5,7 @@ import './InputText.css';
 interface InputTextProps {
     placeholder: string;
     value: string;
-    onChange: (e: Object) => string;
+    onChange: (e: Object) => void;
 }
 
 const InputText = ({placeholder, value, onChange}: InputTextProps) => {
