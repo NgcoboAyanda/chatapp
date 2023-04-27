@@ -1,0 +1,14 @@
+.profileBtn {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.profileBtn__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}

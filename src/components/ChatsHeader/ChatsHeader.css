@@ -1,4 +1,17 @@
 .chats-header{
     height: var(--header-height);
     background-color: var(--background-light);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-mid);
+}
+
+.chats-header > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.chats-header__buttons{
+    margin-left: auto;
 }

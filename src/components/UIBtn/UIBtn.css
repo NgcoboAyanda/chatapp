@@ -1,0 +1,14 @@
+.ui-button{
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+.ui-button > div > svg {
+    fill: var(--ui-icon-light);
+}

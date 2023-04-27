@@ -18,6 +18,13 @@
 
   --background-light: #202c33;
   --background-mid:  #111b21;
+
+  
+  /* icon colors */
+  --ui-icon-light: #aebac1;
+
+  /* margins */
+  --space-mid: 16px;
 }
 
 html, body {
