@@ -11,6 +11,8 @@
 .app__chats{
   height: 100%;
   flex: 3;
+  min-width: 312px;
+  max-width: 380px;
   border-right: 1px solid red;
 }
 
@@ -19,6 +21,8 @@
   display: flex;
   flex-direction: column;
 }
+
+
 
 .app__messages {
   flex: 5;

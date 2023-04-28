@@ -3,7 +3,7 @@ import React from 'react';
 import './ChatsList.css';
 import ArchivedBtn from '../ArchivedBtn/ArchivedBtn';
 import { useAppSelector } from '../../base/hooks';
-import ChatCard from './ChatCard/ChatCard';
+import ChatCard from '../ChatCard/ChatCard';
 
 const ChatsList = () => {
     const { chats } = useAppSelector(state => state.data)
@@ -11,11 +11,12 @@ const ChatsList = () => {
     const renderChatListCards = () => {
         return chats.map( (chat, i) => {
             //destructuring properties of chat object
-            const {name, type, participants, messages} = chat
+            const {name, type, chatPicture, participants, messages} = chat
             return (
                 <ChatCard
                     name={name}
                     type={type}
+                    chatPicture={chatPicture}
                     participants={participants}
                     messages={messages}
                 />
@@ -31,6 +32,7 @@ const ChatsList = () => {
                 />
                 <div className="chats-list__cards">
                     <div>
+                        {renderChatListCards()}
                     </div>
                 </div>
             </div>

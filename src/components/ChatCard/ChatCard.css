@@ -1,0 +1,89 @@
+.chat-card{
+    padding: 0 var(--space-mid);
+    cursor: pointer;
+    height: 72px;
+    transition: background-color 0.1s ease;
+    background-color: var(--card-backgroud-color);
+    --chat-title-font-size: var(--text-size-mid);
+
+    --chat-info-font-size: var(--text-size-normal);
+    --chat-info-time-font-size: 12px;
+    --chat-info-time-color: currentColor;
+    
+    --card-backgroud-color: transparent;
+    --card-background-color-hover: #202c33;
+
+    --unread-count-text-color: var(--background-mid);
+    --unread-count-background-color: var(--color-primary-light);
+    --unread-count-font-size: 10px;
+}
+
+.chat-card_unread{
+    --chat-info-time-color: var(--color-primary-light)
+}
+
+.chat-card:hover{
+    background-color: var(--card-background-color-hover);
+}
+
+.chat-card > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.chat-card__profile-pic > div > img{
+    border-radius: 50%;
+    width: 49px;
+    height: 49px;
+}
+
+.chat-card__info{
+    flex: 1;
+    color: var(--text-color-light);
+    margin-left: var(--space-mid);
+}
+
+.chat-card__info__title > div{
+    display: flex;
+    align-items: center;
+}
+
+.chat-card__info__title > div > .chat-name{
+    display: flex;
+    font-size: var(--chat-title-font-size);
+    font-weight: 500;
+}
+
+.chat-card__info__title > div > .chat-time{
+    display: block;
+    color: var(--chat-info-time-color);
+    background-color: var(--card-background-color);
+    z-index: 1;
+    margin-left: auto;
+    margin-top: 1px;
+    font-size: var(--chat-info-time-font-size);
+}
+
+.chat-card__info__message{
+    margin-top: var(--space-tiny);
+    font-size: var(--chat-info-font-size);
+}
+
+.chat-card__info__message > div {
+    display: flex;
+    position: relative;
+}
+
+.chat-card__info__message__unread-count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: var(--unread-count-text-color);
+    background-color: var(--unread-count-background-color);
+    font-size: var(--unread-count-font-size);
+    margin-left: auto;
+}

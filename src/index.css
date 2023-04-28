@@ -31,6 +31,7 @@
   --ui-icon-light: #aebac1;
 
   /* margins */
+  --space-tiny: 4px;
   --space-small: 8px;
   --space-mid: 16px;
 }
