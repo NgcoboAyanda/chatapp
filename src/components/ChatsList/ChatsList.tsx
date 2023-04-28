@@ -6,7 +6,7 @@ import { useAppSelector } from '../../base/hooks';
 import ChatCard from './ChatCard/ChatCard';
 
 const ChatsList = () => {
-    const { chats=[] } = useAppSelector(state => state.data)
+    const { chats } = useAppSelector(state => state.data)
 
     const renderChatListCards = () => {
         return chats.map( (chat, i) => {
@@ -31,7 +31,6 @@ const ChatsList = () => {
                 />
                 <div className="chats-list__cards">
                     <div>
-
                     </div>
                 </div>
             </div>
