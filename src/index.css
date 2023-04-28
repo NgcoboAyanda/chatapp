@@ -19,6 +19,12 @@
   --background-light: #202c33;
   --background-mid:  #111b21;
 
+  /* text color */
+  --text-color-light: rgb(221, 221, 221);
+
+  /* text size */
+  --text-size-normal: 15px;
+  --text-size-mid: 17px;
   
   /* icon colors */
   --ui-icon-ligher: #e1eef725;
@@ -31,8 +37,14 @@
 
 html, body {
   height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #root{
   height: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
 }

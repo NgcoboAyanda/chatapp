@@ -3,6 +3,7 @@ import './App.css';
 import ChatsHeader from '../components/ChatsHeader/ChatsHeader';
 import MessageHeader from '../components/MessagesHeader/MessagesHeader';
 import ChatsToolbar from '../components/ChatsToolbar/ChatsToolbar';
+import ChatsList from '../components/ChatsList/ChatsList';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <div>
             <ChatsHeader/>
             <ChatsToolbar/>
+            <ChatsList/>
           </div>
         </section>
         <section className="app__messages">

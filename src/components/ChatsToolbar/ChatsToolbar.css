@@ -1,0 +1,23 @@
+.chats-toolbar{
+    width: 100%;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-mid);
+}
+
+.chats-toolbar > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.chats-toolbar__searchbar{
+    flex: 1;
+}
+
+.filter-btn{
+    height: 26px;
+    width: 26px;
+    margin-left: var(--space-small);
+}

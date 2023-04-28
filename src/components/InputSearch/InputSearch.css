@@ -1,0 +1,13 @@
+.input-search{
+    width: 100%;
+}
+
+.input-search__box > input{
+    padding: 0 var(--space-mid);
+    color: var(--text-color-light);
+    background-color: #202c33;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}

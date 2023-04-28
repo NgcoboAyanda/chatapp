@@ -1,0 +1,30 @@
+.filter-btn{
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.filter-btn > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.filter-btn_disabled{
+    background-color: transparent;
+    color: #616f78;
+}
+
+.filter-btn_enabled{
+    background-color: #00a884;
+    color: #f0f0f0;
+}
+
+.filter-btn > div > svg{
+    fill: currentColor;
+}
