@@ -16,8 +16,12 @@
   
   --color-secondary-light: #53bdeb;
 
+  /* backgrounds */
   --background-light: #202c33;
   --background-mid:  #111b21;
+
+  /* borders */
+  --border-light: 1px solid rgba(255, 255, 255, 0.116);
 
   /* text color */
   --text-color-light: rgb(221, 221, 221);
@@ -25,15 +29,17 @@
   /* text size */
   --text-size-normal: 15px;
   --text-size-mid: 17px;
+  --text-size-big: 19px;
   
   /* icon colors */
-  --ui-icon-ligher: #e1eef725;
+  --ui-icon-lighter: #e1eef725;
   --ui-icon-light: #aebac1;
 
   /* margins */
   --space-tiny: 4px;
   --space-small: 8px;
   --space-mid: 16px;
+  --space-big: 20px;
 }
 
 html, body {
@@ -46,6 +52,7 @@ html, body {
 }
 
 .btn {
+  cursor: pointer;
   background-color: transparent;
   border: none;
 }

@@ -7,8 +7,8 @@ const store = configureStore({
     devTools: true,
     reducer: {
         data: dataSlice.reducer,
-        user: userSlice.reducer
-
+        user: userSlice.reducer,
+        ui: uiSlice.reducer,
     }
 })
 

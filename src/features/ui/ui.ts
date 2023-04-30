@@ -3,44 +3,37 @@ import type {  RootState } from '../../base/store'
 
 //Define a type for the slice state
 interface uiSliceState {
-    profile: {
-        open: boolean
+    [key: string]: {
+        [key: string]: any,
+    };
+    UserProfileTab: {
+        isOpen: boolean
     },
-    communities: {
-        open: boolean
+    CommunitiesTab: {
+        isOpen: boolean
     },
-    newChat: {
-        open: boolean
+    NewChatTab: {
+        isOpen: boolean
     },
-    archived: {
-        open: boolean
-    },
-    chatList: {
-        filterEnabled: boolean
-    },
-    chatViewer: {
-        currentChat: any
+    ArchivedTab: {
+        isOpen: boolean
     }
+    
 }
 
 const initialState : uiSliceState = {
-    profile: {
-        open: false
+    /* these popup on the left side of the screen */
+    UserProfileTab: {
+        isOpen: false
     },
-    communities: {
-        open: false
+    CommunitiesTab: {
+        isOpen: false
     },
-    newChat: {
-        open: false
+    NewChatTab: {
+        isOpen: false
     },
-    archived: {
-        open: false
-    },
-    chatList: {
-        filterEnabled: false
-    },
-    chatViewer: {
-        currentChat: null
+    ArchivedTab: {
+        isOpen: false
     }
 }
 
@@ -48,8 +41,13 @@ export const uiSlice = createSlice({
     name: 'ui',
     initialState,
     reducers: {
-
+        toggleTabIsOpen: (state, action : PayloadAction<{ tabName: string }>) => {
+            const { tabName } = action.payload;
+            state[tabName].isOpen =!state[tabName].isOpen;
+        }
     }
 })
+
+export const { toggleTabIsOpen } = uiSlice.actions;
 
 export default uiSlice

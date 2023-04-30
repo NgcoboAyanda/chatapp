@@ -1,6 +1,8 @@
 import React from "react";
 
-import './ProfileBtn.css';
+import './UserProfileBtn.css';
+import { useAppDispatch } from "../../base/hooks";
+import { toggleTabIsOpen } from "../../features/ui/ui";
 
 interface ProfileBtnProps {
     image: string,//this is a link
@@ -10,15 +12,14 @@ interface ProfileBtnProps {
 
 const ProfileBtn = ({ image, alt, openProfile } : ProfileBtnProps) => {
 
-    //will be called when the profileBtn component is clicked
-    const click = (e: Object) => {
-        if(openProfile) openProfile();
-    }
+    const dispatch = useAppDispatch();
 
     return (
-        <button className="profileBtn" onClick={e=>click(e)}>
+        <button className="userProfileBtn" onClick={()=> dispatch(toggleTabIsOpen({
+            tabName: "UserProfileTab"
+        }))}>
             <div>
-                <img className="profileBtn__img" src={image} alt={alt} />
+                <img className="userProfileBtn__img" src={image} alt={alt} />
             </div>
         </button>
     )

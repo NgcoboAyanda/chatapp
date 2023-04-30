@@ -1,26 +1,24 @@
-.ui-button{
-    background-color: transparent;
-    border: none;
+.tab-btn{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    cursor: pointer;
     transition: background-color 0.08s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--ui-icon-light);
 }
 
-.ui-button:active{
-    background-color: var(--ui-icon-ligher);
+.tab-btn_clicked {
+    background-color: var(--ui-icon-lighter);
 }
 
-.ui-button > div {
+.tab-btn > div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.ui-button > div > svg {
-    fill: var(--ui-icon-light);
+.tab-btn > div > svg {
+    fill: currentColor;
 }

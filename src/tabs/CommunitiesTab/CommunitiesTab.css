@@ -1,0 +1,4 @@
+.communities-tab{
+    --background-color: #111b21;
+    background-color: var(--background-color);
+}

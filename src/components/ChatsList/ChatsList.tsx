@@ -11,15 +11,18 @@ const ChatsList = () => {
     const renderChatListCards = () => {
         return chats.map( (chat, i) => {
             //destructuring properties of chat object
-            const {name, type, chatPicture, participants, messages} = chat
+            const {name, type, chatPicture, participants, messages} = chat;
+            let key: number = 0;
             return (
-                <ChatCard
-                    name={name}
-                    type={type}
-                    chatPicture={chatPicture}
-                    participants={participants}
-                    messages={messages}
-                />
+                <React.Fragment key={key}>
+                    <ChatCard
+                        name={name}
+                        type={type}
+                        chatPicture={chatPicture}
+                        participants={participants}
+                        messages={messages}
+                    />
+                </React.Fragment>
             )
         })
     }
