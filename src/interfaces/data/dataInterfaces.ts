@@ -22,7 +22,7 @@ export interface ChatInterface {
     type: string,
     id: number,
     chatPicture: string,
-    participants: Array<string>,
+    participants?: Array<string>,
     messages: Array<MessageInterface>
 }
 
