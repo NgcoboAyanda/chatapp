@@ -1,5 +1,7 @@
 import React from 'react';
+
 import './App.css';
+
 import ChatsHeader from '../components/ChatsHeader/ChatsHeader';
 import MessagesHeader from '../components/MessagesHeader/MessagesHeader';
 import ChatsToolbar from '../components/ChatsToolbar/ChatsToolbar';
@@ -9,8 +11,29 @@ import { useAppDispatch, useAppSelector } from './hooks';
 import { toggleTabIsOpen } from '../features/ui/ui';
 import CommunitiesTab from '../tabs/CommunitiesTab/CommunitiesTab';
 import NewChatTab from '../tabs/NewChatTab/NewChatTab';
+import MessagesViewer from '../components/MessagesViewer/MessagesViewer';
+const chatBgImage = require('../images/chat-bg.png');
+
 
 const App = () => {
+  const {chatViewer: {openChat}} = useAppSelector(state => state.ui);
+
+  const renderMessagesSection = () => {
+    if(openChat !== null){
+      //if there is an open chat
+      return (
+        <section className="app__messages">
+          <div>
+            <MessagesHeader/>
+            <MessagesViewer/>
+          </div>
+        </section>
+      )
+    }
+    else{
+      //if there is no open chat
+    }
+  }
 
   return (
     <div className="app">
@@ -27,11 +50,7 @@ const App = () => {
             <NewChatTab/>
           </div>
         </section>
-        <section className="app__messages">
-          <div>
-            <MessagesHeader/>
-          </div>
-        </section>
+        {renderMessagesSection()}
       </div>
     </div>
   );

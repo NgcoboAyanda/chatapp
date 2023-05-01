@@ -1,4 +1,5 @@
 .messages-header{
+    padding: 0 var(--space-big);
     height: var(--header-height);
     display: flex;
     align-items: center;
@@ -6,5 +7,16 @@
 }
 
 .messages-header > div {
+    width: 100%;
     display: flex;
+}
+
+.messages-header__chat-name{
+    margin-right: auto;
+    margin-left: var(--space-mid);
+    display: flex;
+    align-items: center;
+    font-size: var(--text-size-mid);
+    color: var(--text-color-light);
+    padding-bottom: 8px;
 }

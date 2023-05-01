@@ -1,0 +1,13 @@
+.messages-viewer{
+    width: 100%;
+    position: relative;
+}
+
+.messages-viewer__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/chat-bg.png');
+    opacity: 0.1;
+}
+
