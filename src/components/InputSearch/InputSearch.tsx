@@ -14,7 +14,7 @@ const InputSearch = ({placeholder, value, handleChange}: InputSearchProps) => {
         <div className="input input-search">
             <div>
                 <div className="input-search__box">
-                    <input className="" type="text" onChange={e => handleChange(e.target.value)} placeholder="Search or start new chat"/>
+                    <input className="" type="text" onChange={e => handleChange(e.target.value)} placeholder={placeholder}/>
                 </div>
             </div>
         </div>

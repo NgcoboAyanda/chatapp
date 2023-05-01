@@ -1,4 +1,10 @@
 .messages-header{
     height: var(--header-height);
+    display: flex;
+    align-items: center;
     background-color: var(--background-light);
+}
+
+.messages-header > div {
+    display: flex;
 }

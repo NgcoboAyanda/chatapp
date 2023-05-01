@@ -10,11 +10,39 @@ interface DataState {
 
 const initialState: DataState = {
     contacts: [
-
+        {
+            name: "Armani",
+            profilePicURL: "",
+            phone: "+55 456 982 111",
+            about: "pineapple",
+            lastSeen: "28 December 2022"
+        },
+        {
+            name: "Kanye",
+            profilePicURL: "",
+            phone: "+1 234 567 8901",
+            about: "Ye",
+            lastSeen: "Yesterday at 21:39"
+        },
+        {
+            name: "Zola",
+            profilePicURL: "",
+            phone: "+4 234 567 8901",
+            about: "",
+            lastSeen: "Today at 05: 35"
+        },
+        {
+            name: "Ntwana",
+            profilePicURL: "",
+            phone: "+27 73 567 8901",
+            about: "spush ilyfe boiii",
+            lastSeen: "Yesterday at 00:01"
+        },
     ],
     chats: [
         {
             name: "Linear Algebra Students University Of Heldenburg",
+            id: 1001,
             type: "group",
             chatPicture: "https://i.pinimg.com/736x/16/9a/10/169a10315996fab765a9cea4027dd412.jpg",
             participants: [

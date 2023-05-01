@@ -1,16 +1,16 @@
 import React from "react";
 
 import './UserProfileBtn.css';
-import { useAppDispatch } from "../../base/hooks";
+import { useAppDispatch, useAppSelector } from "../../base/hooks";
 import { toggleTabIsOpen } from "../../features/ui/ui";
 
 interface ProfileBtnProps {
     image: string,//this is a link
     alt: string,//this is the image alt text
-    openProfile: () => void; //this is a function that will be called when the profileBtn component is clicked. it will open the Profile component.
 }
 
-const ProfileBtn = ({ image, alt, openProfile } : ProfileBtnProps) => {
+const ProfileBtn = ({ image, alt } : ProfileBtnProps) => {
+    const {user} = useAppSelector(state => state);
 
     const dispatch = useAppDispatch();
 
@@ -19,7 +19,7 @@ const ProfileBtn = ({ image, alt, openProfile } : ProfileBtnProps) => {
             tabName: "UserProfileTab"
         }))}>
             <div>
-                <img className="userProfileBtn__img" src={image} alt={alt} />
+                <img className="userProfileBtn__img" src={user.profilePicURL} alt="Your profile picture" />
             </div>
         </button>
     )

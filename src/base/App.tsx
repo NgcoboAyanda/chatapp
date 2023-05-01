@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ChatsHeader from '../components/ChatsHeader/ChatsHeader';
-import MessageHeader from '../components/MessagesHeader/MessagesHeader';
+import MessagesHeader from '../components/MessagesHeader/MessagesHeader';
 import ChatsToolbar from '../components/ChatsToolbar/ChatsToolbar';
 import ChatsList from '../components/ChatsList/ChatsList';
 import UserProfileTab from '../tabs/UserProfileTab/UserProfileTab';
@@ -29,7 +29,7 @@ const App = () => {
         </section>
         <section className="app__messages">
           <div>
-            <MessageHeader/>
+            <MessagesHeader/>
           </div>
         </section>
       </div>

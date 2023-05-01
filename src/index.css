@@ -12,7 +12,7 @@
   /* colors */
   --color-primary-light: #06cf9c;
   --color-primary-normal: #00a884;
-  --color-primary-dark: #005c4b; 
+  --color-primary-dark: #018069e3; 
   
   --color-secondary-light: #53bdeb;
 
@@ -21,10 +21,11 @@
   --background-mid:  #111b21;
 
   /* borders */
-  --border-light: 1px solid rgba(255, 255, 255, 0.116);
+  --border-light: 1px solid rgba(108, 108, 108, 0.334);
 
   /* text color */
   --text-color-light: rgb(221, 221, 221);
+  --text-color-mid: #515f66;
 
   /* text size */
   --text-size-normal: 15px;

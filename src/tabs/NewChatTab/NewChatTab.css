@@ -2,3 +2,15 @@
     --background-color: #111b21;
     background-color: var(--background-color);
 }
+
+.new-chat-tab__search-box {
+    padding: var(--space-small) 10px;
+}
+
+.new-chat-tab__contacts__label {
+    margin-top: 42px;
+    padding: 0 28px;
+    margin-bottom: 30px;
+    color: var(--color-primary-dark);
+    font-size: 16px;
+}

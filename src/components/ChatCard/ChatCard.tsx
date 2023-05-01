@@ -4,11 +4,13 @@ import { ChatInterface } from '../../interfaces/data/dataInterfaces';
 import './ChatCard.css';
 import { convertTimestampTo24Hour } from '../../base/hooks';
 
-interface ChatCardProps extends ChatInterface {
-
+interface ChatCardProps {
+    chat: ChatInterface;
+    isCurrentlyOpen: boolean;
+    handleClick: () => void;
 };
 
-const ChatCard = ( { name, type, chatPicture, participants, messages } : ChatCardProps ) => {
+const ChatCard = ( { chat: {name, type, chatPicture, participants, messages,}, isCurrentlyOpen, handleClick } : ChatCardProps ) => {
     const[nOfUnreadMsgs, setNoOfUnreadMsgs] = useState<number>(0);//the number of unread messages
 
 
@@ -43,7 +45,7 @@ const ChatCard = ( { name, type, chatPicture, participants, messages } : ChatCar
     }
 
     return (
-        <div className={`chat-card ${nOfUnreadMsgs>0?'chat-card_unread':''}`}>
+        <div className={`chat-card ${nOfUnreadMsgs>0?'chat-card_unread':''} ${isCurrentlyOpen?'chat-card_open':''}`} onClick={handleClick}>
             <div>
                 <div className="chat-card__profile-pic">
                     <div>

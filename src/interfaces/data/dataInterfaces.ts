@@ -4,8 +4,10 @@ import { UserInterface } from "../user/userInterfaces"
 
 export interface ContactInterface {
     name: string,
+    profilePicURL: "",
     phone: string,
-    lastSeen: number,
+    about: string,
+    lastSeen: string,
 }
 
 export interface MessageInterface {
@@ -18,6 +20,7 @@ export interface MessageInterface {
 export interface ChatInterface {
     name: string,
     type: string,
+    id: number,
     chatPicture: string,
     participants: Array<string>,
     messages: Array<MessageInterface>

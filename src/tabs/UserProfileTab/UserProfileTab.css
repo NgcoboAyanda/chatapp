@@ -1,4 +1,58 @@
 .user-profile-tab {
     --background-color: #111b21;
+    --picture-padding: 28px;
     background-color: var(--background-color);
+}
+
+.user-profile-tab__picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: var(--picture-padding)0;
+}
+
+.user-profile-tab__picture > div > img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.user-profile-tab__name {
+    padding: 0 var(--space-big);
+    font-size: var(--text-size-normal);
+}
+
+.user-profile-tab__name > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-tab__name > div > .label {
+    color: var(--color-primary-dark);
+}
+
+.user-profile-tab__name > div > .text {
+    color: var(--text-color-light);
+    font-size: var(--text-size-mid);
+    margin-top: var(--space-mid);
+}
+
+.user-profile-tab__name > div > .message {
+    margin-top: var(--space-big);
+    color: var(--text-color-mid);
+}
+
+.user-profile-tab__about{
+    margin-top: 32px;
+    padding: 0 var(--space-big);
+}
+
+.user-profile-tab__about > div > .label {
+    font-size: var(--text-size-normal);
+    color: var(--color-primary-dark);
+}
+
+.user-profile-tab__about > div > .text {
+    color: var(--text-color-light);
+    margin-top: var(--space-big);
 }

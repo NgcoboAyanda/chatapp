@@ -8,6 +8,39 @@
     justify-content: center;
 }
 
+.sub-menu-btn > div {
+    position: relative;
+}
+
 .sub-menu-btn_clicked{
     background-color: var(--ui-icon-lighter);
+}
+
+.sub-menu-btn__options {
+    padding: var(--space-small) 0;
+    top: 140%;
+    right: 30%;
+    width: 200px;
+    z-index: 3;
+    position: absolute;
+    background-color: #233138;
+    transition: all 0.5s ease-in-out;
+}
+
+.sub-menu-btn__options_hidden{
+    display: none !important;
+}
+
+.sub-menu-btn__options > div > .option {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+
+.sub-menu-btn__options > div > .option:hover {
+    background-color: rgba(0, 0, 0, 0.183);
 }

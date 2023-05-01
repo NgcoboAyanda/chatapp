@@ -13,6 +13,7 @@
   flex: 3;
   min-width: 312px;
   max-width: 380px;
+  border-right: var(--border-light);
 }
 
 .app__chats > div {

@@ -22,6 +22,10 @@
     --chat-info-time-color: var(--color-primary-light)
 }
 
+.chat-card_open{
+    background-color: #2a3942;
+}
+
 .chat-card:hover{
     background-color: var(--card-background-color-hover);
 }

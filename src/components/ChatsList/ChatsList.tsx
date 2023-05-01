@@ -2,25 +2,31 @@ import React from 'react';
 
 import './ChatsList.css';
 import ArchivedBtn from '../ArchivedBtn/ArchivedBtn';
-import { useAppSelector } from '../../base/hooks';
+import { useAppDispatch, useAppSelector } from '../../base/hooks';
 import ChatCard from '../ChatCard/ChatCard';
+import { setChatViewerOpenChat } from '../../features/ui/ui';
 
 const ChatsList = () => {
+    const { chatViewer: { openChat }} = useAppSelector(state => state.ui);
     const { chats } = useAppSelector(state => state.data)
+
+    const dispatch = useAppDispatch();
 
     const renderChatListCards = () => {
         return chats.map( (chat, i) => {
             //destructuring properties of chat object
-            const {name, type, chatPicture, participants, messages} = chat;
-            let key: number = 0;
             return (
-                <React.Fragment key={key}>
+                <React.Fragment key={i}>
                     <ChatCard
-                        name={name}
-                        type={type}
-                        chatPicture={chatPicture}
-                        participants={participants}
-                        messages={messages}
+                        chat={chat}
+                        isCurrentlyOpen={openChat !== null && openChat.id === chat.id?true:false}
+                        handleClick={() => {
+                            dispatch(
+                                setChatViewerOpenChat({
+                                    chat: chat
+                                })
+                            )
+                        }}
                     />
                 </React.Fragment>
             )
