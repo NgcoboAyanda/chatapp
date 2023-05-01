@@ -26,8 +26,10 @@
   /* text color */
   --text-color-light: rgb(221, 221, 221);
   --text-color-mid: #abbac3;
+  --text-color-dark: #828c92;
 
   /* text size */
+  --text-size-small: 13px;
   --text-size-normal: 15px;
   --text-size-mid: 17px;
   --text-size-big: 19px;

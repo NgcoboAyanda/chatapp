@@ -64,6 +64,21 @@ const MessageHeader = () => {
         }
     }
 
+    const renderChatParticipants = () => {
+        if(openChat?.type === 'group'){
+            return openChat.participants?.map( (p, i) => {
+                return (
+                    <span key={i} className="participant">
+                        {p}
+                    </span>
+                )
+            })
+        }
+        else {
+            return null;
+        }
+    }
+
     return (
         <div className="messages-header">
             <div>
@@ -77,7 +92,16 @@ const MessageHeader = () => {
                     </div>
                 </div>
                 <div className="messages-header__chat-name">
-                    {openChat?.name}
+                    <div>
+                        <div className="name">
+                            {openChat?.name}
+                        </div>
+                        <div className="participants">
+                            <div>
+                                {renderChatParticipants()}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="messages-header__submenu-btn">
                     <div>

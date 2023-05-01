@@ -12,11 +12,36 @@
 }
 
 .messages-header__chat-name{
+    white-space: nowrap;
+    flex: 1;
     margin-right: auto;
     margin-left: var(--space-mid);
     display: flex;
     align-items: center;
     font-size: var(--text-size-mid);
     color: var(--text-color-light);
-    padding-bottom: 8px;
+    padding-bottom: 22px;
+}
+
+.messages-header__chat-name > div {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.messages-header__chat-name > div > .participants {
+    color: var(--text-color-dark);
+    height: 20px;
+    width: 80%;
+    overflow: hidden;
+    bottom: -22px;
+    position: absolute;
+    display: flex;
+    font-size: var(--text-size-small);
+}
+
+.messages-header__chat-name > div > .participants > div {
+    display: flex;
+    white-space: nowrap;
+    width: max-content;
 }
