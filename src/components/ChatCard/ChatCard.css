@@ -48,15 +48,27 @@
     margin-left: var(--space-mid);
 }
 
+.chat-card__info > div {
+    position: relative;
+}
+
 .chat-card__info__title > div{
     display: flex;
     align-items: center;
 }
 
 .chat-card__info__title > div > .chat-name{
-    display: flex;
+    overflow: hidden;
+    height: 25px;
+    position: relative;
+    width: 86%;
     font-size: var(--chat-title-font-size);
     font-weight: 500;
+}
+
+.chat-card__info__title > div > .chat-name > div {
+    position: absolute;
+    width: max-content;
 }
 
 .chat-card__info__title > div > .chat-time{
@@ -70,16 +82,23 @@
 }
 
 .chat-card__info__message{
-    margin-top: var(--space-tiny);
+    position: relative;
+    height: 20px;
     font-size: var(--chat-info-font-size);
+    width: 80%;
+    overflow: hidden;
 }
 
 .chat-card__info__message > div {
     display: flex;
-    position: relative;
+    position: absolute;
+    width: max-content;
 }
 
-.chat-card__info__message__unread-count{
+.chat-card__info__unread-count{
+    position: absolute;
+    right: 0;
+    top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;

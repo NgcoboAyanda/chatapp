@@ -12,6 +12,7 @@ import { toggleTabIsOpen } from '../features/ui/ui';
 import CommunitiesTab from '../tabs/CommunitiesTab/CommunitiesTab';
 import NewChatTab from '../tabs/NewChatTab/NewChatTab';
 import MessagesViewer from '../components/MessagesViewer/MessagesViewer';
+import MessagesToolbar from '../components/MessagesToolbar/MessagesToolbar';
 const chatBgImage = require('../images/chat-bg.png');
 
 
@@ -26,6 +27,7 @@ const App = () => {
           <div>
             <MessagesHeader/>
             <MessagesViewer/>
+            <MessagesToolbar/>
           </div>
         </section>
       )

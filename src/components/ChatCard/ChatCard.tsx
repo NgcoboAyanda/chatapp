@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect, SetStateAction } from 'react';
 import { ChatInterface } from '../../interfaces/data/dataInterfaces';
 
 import './ChatCard.css';
 import { convertTimestampTo24Hour } from '../../base/hooks';
+import { useMeasure } from '@reactivers/hooks';
 
 interface ChatCardProps {
     chat: ChatInterface;
@@ -12,7 +13,18 @@ interface ChatCardProps {
 
 const ChatCard = ( { chat: {name, type, chatPicture, participants, messages,}, isCurrentlyOpen, handleClick } : ChatCardProps ) => {
     const[nOfUnreadMsgs, setNoOfUnreadMsgs] = useState<number>(0);//the number of unread messages
+    const ref = useRef<HTMLDivElement>(null);
+    const [chatNameHeight, setChatNameHeight] = useState<number>(0);
+    const chatNameRef = useRef<HTMLSpanElement> (null);
 
+    const {height} = useMeasure({ref: chatNameRef});
+
+    useEffect(
+        () => {
+            setChatNameHeight(height)
+        },
+        [height]
+    )
 
     useEffect(
         () => {
@@ -28,24 +40,12 @@ const ChatCard = ( { chat: {name, type, chatPicture, participants, messages,}, i
         [messages]
     )
 
-    const trimAndAddElipses = (theString: string, idealLength: number): string => {
-        let result = "";
-        if(theString.length >= idealLength){
-            if(idealLength > 3){
-                result = theString.slice(0 , idealLength-3)+"...";
-            }
-            else{
-                result = theString.slice(0 , idealLength)+"...";
-            }
-        }
-        else {
-            result = theString;
-        }
-        return result;
+    const trimAndAddElipses = (theString: string): string => {
+        return theString;
     }
 
     return (
-        <div className={`chat-card ${nOfUnreadMsgs>0?'chat-card_unread':''} ${isCurrentlyOpen?'chat-card_open':''}`} onClick={handleClick}>
+        <div className={`chat-card ${nOfUnreadMsgs>0?'chat-card_unread':''} ${isCurrentlyOpen?'chat-card_open':''}`} onClick={handleClick} ref={ref}>
             <div>
                 <div className="chat-card__profile-pic">
                     <div>
@@ -57,9 +57,11 @@ const ChatCard = ( { chat: {name, type, chatPicture, participants, messages,}, i
                     <div>
                         <div className="chat-card__info__title">
                             <div>
-                                <span className="chat-name">
-                                    {trimAndAddElipses(name, 25)}
-                                </span>
+                                <div className="chat-name">
+                                    <div>
+                                        {trimAndAddElipses(name)}
+                                    </div>
+                                </div>
                                 <span className="chat-time">
                                     {
                                         /* get last message time and use a function to convert it to 24 hour format */
@@ -80,18 +82,18 @@ const ChatCard = ( { chat: {name, type, chatPicture, participants, messages,}, i
                                     {
                                         /* get the last message content */
                                         trimAndAddElipses(
-                                            messages[messages.length - 1].content,
-                                            17
+                                            messages[messages.length - 1].content
                                         )
                                     }
                                 </div>
-                                <div className="chat-card__info__message__unread-count">
+                                
+                            </div>
+                        </div>
+                        <div className="chat-card__info__unread-count">
                                     <span>
                                         {nOfUnreadMsgs<999?nOfUnreadMsgs:"999"}
                                     </span>
                                 </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

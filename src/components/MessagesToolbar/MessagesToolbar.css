@@ -1,0 +1,26 @@
+.messages-toolbar{
+    padding: 0 var(--space-big);
+    height: 62px;
+    --toolbar-background: #202c33;
+    background-color: var(--toolbar-background);
+}
+
+.messages-toolbar > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.messages-toolbar > div > *:not(:first-child){
+    margin-left: var(--space-mid);
+}
+
+.messages-toolbar-btn{
+    color: var(--text-color-mid);
+}
+
+.messages-toolbar-btn > div > svg {
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+}

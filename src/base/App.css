@@ -12,7 +12,7 @@
   height: 100%;
   flex: 3;
   min-width: 312px;
-  max-width: 380px;
+  max-width: 600px;
   border-right: var(--border-light);
 }
 
