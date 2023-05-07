@@ -11,30 +11,30 @@ interface DataState {
 const initialState: DataState = {
     contacts: [
         {
-            name: "Armani",
+            displayName: "Armani",
             profilePicURL: "",
-            phone: "+55 456 982 111",
+            phoneNumber: "+55 456 982 111",
             about: "pineapple",
             lastSeen: "28 December 2022"
         },
         {
-            name: "Kanye",
+            displayName: "Kanye",
             profilePicURL: "",
-            phone: "+1 234 567 8901",
+            phoneNumber: "+1 234 567 8901",
             about: "Ye",
             lastSeen: "Yesterday at 21:39"
         },
         {
-            name: "Zola",
+            displayName: "Zola",
             profilePicURL: "",
-            phone: "+4 234 567 8901",
+            phoneNumber: "+4 234 567 8901",
             about: "",
             lastSeen: "Today at 05: 35"
         },
         {
-            name: "Ntwana",
+            displayName: "Ntwana",
             profilePicURL: "",
-            phone: "+27 73 567 8901",
+            phoneNumber: "+27 73 567 8901",
             about: "spush ilyfe boiii",
             lastSeen: "Yesterday at 00:01"
         },
@@ -61,6 +61,7 @@ const initialState: DataState = {
                         profilePicURL: "https://i.pinimg.com/564x/6c/66/6b/6c666bfcbbc29a8825a18f432e0dce9c.jpg",
                         phoneNumber: "+27 00 000 0000",
                         about: "the GOAT",
+                        lastSeen:""
                     },
                     content: "lmaoo what the f?",
                     timeStamp: 1682679908001,
@@ -72,6 +73,7 @@ const initialState: DataState = {
                         profilePicURL: "",
                         phoneNumber: "+27 00 000 0005",
                         about: "miss me with that shiii",
+                        lastSeen:""
                     },
                     content: "Shidd I saw that too😭😭",
                     timeStamp: 1682679908006,
@@ -83,6 +85,7 @@ const initialState: DataState = {
                         profilePicURL: "https://i.pinimg.com/736x/60/87/75/6087756f49924b9507b332de35cb0bdc.jpg",
                         phoneNumber: "+27 00 000 0000",
                         about: "the GOAT",
+                        lastSeen:""
                     },
                     content: "Don't event try it, crusty ass mf😆",
                     timeStamp: 1682679908055,
@@ -93,10 +96,53 @@ const initialState: DataState = {
                         displayName: "marvie",
                         profilePicURL: "https://i.pinimg.com/736x/fe/25/60/fe2560491a8495ad277535d6b704b41f.jpg",
                         phoneNumber: "+27 00 020 0000",
-                        about: ""
+                        about: "",
+                        lastSeen:""
                     },
                     content: "she spotted me onsite ☠",
                     timeStamp: 1682679908085,
+                    read: false
+                }
+            ]
+        },
+        {
+            name: "Jane",
+            type: "contact",
+            id: 2,
+            chatPicture: "",
+            contactLastSeen: "tuesday at 21:00",
+            messages: [
+                {
+                    author: {
+                        displayName: "Jane",
+                        profilePicURL:"",
+                        phoneNumber: "+27 00 000 0000",
+                        about: "Hey! Welcome to ChatApp.",
+                        lastSeen:""
+                    },
+                    content: "Heyyyy",
+                    timeStamp: 1682679908001,
+                    read: false
+                }
+            ]
+        },
+        {
+            name: "Laylaa❤❤❤",
+            type: "contact",
+            id: 3,
+            chatPicture: "https://i.pinimg.com/736x/a5/ca/5e/a5ca5ed6cf0791ea74c3e821630eef14.jpg",
+            contactLastSeen: "yesterday at 14.37",
+            messages: [
+                {
+                    author: {
+                        displayName: "Laylaa",
+                        profilePicURL:"",
+                        phoneNumber: "+27 00 000 0000",
+                        about: "Hey! Welcome to ChatApp.",
+                        lastSeen:"Yesterday at 00:01"
+                    },
+                    content: "Why aren't you responding to my messages you bitch",
+                    timeStamp: 1682679908001,
                     read: false
                 }
             ]

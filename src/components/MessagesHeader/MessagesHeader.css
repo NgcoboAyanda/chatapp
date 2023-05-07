@@ -29,6 +29,14 @@
     position: relative;
 }
 
+.messages-header__chat-name > div > .last-seen{
+    position: absolute;
+    color: var(--text-color-dark);
+    height: 20px;
+    font-size: var(--text-size-small);
+    bottom: -22px;
+}
+
 .messages-header__chat-name > div > .participants {
     color: var(--text-color-dark);
     height: 20px;

@@ -15,7 +15,7 @@ const ContactCard = ( { contact } : ContactCardProps ) => {
         //if contact has a profile picture
         if(contact.profilePicURL){
             return(
-                <img className="contact-card__pic__icon" src={contact.profilePicURL} alt={`${contact.name}'s profile picture`} />
+                <img className="contact-card__pic__icon" src={contact.profilePicURL} alt={`${contact.displayName}'s profile picture`} />
             )
         }
         //if contact does not have a profile picture
@@ -37,7 +37,7 @@ const ContactCard = ( { contact } : ContactCardProps ) => {
                 <div className="contact-card__details">
                     <div>
                         <div className="contact-card__details__name">
-                            {contact.name}
+                            {contact.displayName}
                         </div>
                         <div className="contact-card__details__about">
                             {contact.about}

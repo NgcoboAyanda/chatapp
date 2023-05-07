@@ -3,15 +3,15 @@
 import { UserInterface } from "../user/userInterfaces"
 
 export interface ContactInterface {
-    name: string,
-    profilePicURL: "",
-    phone: string,
+    displayName: string,
+    profilePicURL: string,
+    phoneNumber: string,
     about: string,
     lastSeen: string,
 }
 
 export interface MessageInterface {
-    author: UserInterface,
+    author: ContactInterface,
     content: string,
     timeStamp: number,
     read: boolean,
@@ -24,6 +24,7 @@ export interface ChatInterface {
     chatPicture: string,
     participants?: Array<string>,
     messages: Array<MessageInterface>
+    contactLastSeen?:string
 }
 
 export {}

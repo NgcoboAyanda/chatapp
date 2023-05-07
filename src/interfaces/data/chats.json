@@ -1,0 +1,97 @@
+[
+    {
+      "name": "Family Group Chat",
+      "type": "group",
+      "id": 1,
+      "chatPicture": "https://example.com/family-group-chat.jpg",
+      "messages": [
+        {
+          "author": {
+            "name": "Mom",
+            "profilePicURL": "https://example.com/mom-profile.jpg",
+            "phone": "+1-123-456-7890",
+            "about": "Mom of the family",
+            "lastSeen": "Just now"
+          },
+          "content": "Hi everyone, how are you doing today?",
+          "timeStamp": 1651971300,
+          "read": true
+        },
+        {
+          "author": {
+            "name": "Dad",
+            "profilePicURL": "https://example.com/dad-profile.jpg",
+            "phone": "+1-123-456-7891",
+            "about": "Dad of the family",
+            "lastSeen": "2 minutes ago"
+          },
+          "content": "Doing good, thanks for asking!",
+          "timeStamp": 1651971400,
+          "read": true
+        },
+        {
+          "author": {
+            "name": "Sister",
+            "profilePicURL": "https://example.com/sister-profile.jpg",
+            "phone": "+1-123-456-7892",
+            "about": "Sister of the family",
+            "lastSeen": "5 minutes ago"
+          },
+          "content": "Hey everyone! Just finished my exams, so happy!",
+          "timeStamp": 1651971500,
+          "read": false
+        }
+      ]
+    },
+    {
+      "name": "Work Group Chat",
+      "type": "group",
+      "id": 2,
+      "chatPicture": "https://example.com/work-group-chat.jpg",
+      "participants": [
+        "Alice",
+        "Bob",
+        "Charlie",
+        "Dave"
+      ],
+      "messages": [
+        {
+          "author": {
+            "name": "Alice",
+            "profilePicURL": "https://example.com/alice-profile.jpg",
+            "phone": "+1-234-567-8901",
+            "about": "Software engineer",
+            "lastSeen": "Just now"
+          },
+          "content": "Hey team, just a quick reminder that we have a meeting in 30 minutes.",
+          "timeStamp": 1651971600,
+          "read": true
+        },
+        {
+          "author": {
+            "name": "Bob",
+            "profilePicURL": "https://example.com/bob-profile.jpg",
+            "phone": "+1-234-567-8902",
+            "about": "Product manager",
+            "lastSeen": "1 minute ago"
+          },
+          "content": "Thanks for the reminder, Alice!",
+          "timeStamp": 1651971700,
+          "read": true
+        },
+        {
+          "author": {
+            "name": "Charlie",
+            "profilePicURL": "https://example.com/charlie-profile.jpg",
+            "phone": "+1-234-567-8903",
+            "about": "Designer",
+            "lastSeen": "5 minutes ago"
+          },
+          "content": "I'm almost done with the design for the new feature. Can't wait to show you guys!",
+          "timeStamp": 1651971800,
+          "read": false
+        }
+      ]
+    }
+]
+  
